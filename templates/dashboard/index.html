@@ -1,0 +1,579 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="content">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-globe text-warning"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Kapasitas</p>
+                  <p class="card-title">128GB<p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-refresh"></i>
+              Perbarui Sekarang
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-money-coins text-success"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Pendapatan</p>
+                  <p class="card-title">$ 1,345<p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-calendar-o"></i>
+              Hari Terakhir
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-vector text-danger"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Errors</p>
+                  <p class="card-title">0<p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-clock-o"></i>
+              Dalam Jam Terakhir
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-5 col-md-4">
+                <div class="icon-big text-center icon-warning">
+                  <i class="nc-icon nc-favourite-28 text-primary"></i>
+                </div>
+              </div>
+              <div class="col-7 col-md-8">
+                <div class="numbers">
+                  <p class="card-category">Pengikut</p>
+                  <p class="card-title">45K+<p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-refresh"></i>
+              Perbarui Sekarang
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-sm-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="numbers pull-left">
+                  $34,657
+                </div>
+              </div>
+              <div class="col-sm-5">
+                <div class="pull-right">
+                  <span class="badge badge-pill badge-success">
+                    +25%
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="big-title">TOTAL PENDAPATAN DALAM 10 KUARTAL TERAKHIR</h6>
+            <canvas id="activeUsers" width="826" height="380"></canvas>
+          </div>
+          <div class="card-footer">
+            <hr>
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="footer-title">Statistik Keuangan</div>
+              </div>
+              <div class="col-sm-5">
+                <div class="pull-right">
+                  <button class="btn btn-success btn-round btn-icon btn-sm">
+                    <i class="nc-icon nc-simple-add"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="numbers pull-left">
+                  144
+                </div>
+              </div>
+              <div class="col-sm-5">
+                <div class="pull-right">
+                  <span class="badge badge-pill badge-danger">
+                    -10%
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="big-title">TOTAL LANGGANAN DALAM 7 HARI TERAKHIR</h6>
+            <canvas id="emailsCampaignChart" width="826" height="380"></canvas>
+          </div>
+          <div class="card-footer">
+            <hr>
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="footer-title">Lihat semua anggota</div>
+              </div>
+              <div class="col-sm-5">
+                <div class="pull-right">
+                  <button class="btn btn-danger btn-round btn-icon btn-sm">
+                    <i class="nc-icon nc-button-play"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="card">
+          <div class="card-header">
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="numbers pull-left">
+                  8,960
+                </div>
+              </div>
+              <div class="col-sm-5">
+                <div class="pull-right">
+                  <span class="badge badge-pill badge-warning">
+                    ~51%
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h6 class="big-title">TOTAL UNDUHAN DALAM 10 BULAN TERAKHIR</h6>
+            <canvas id="activeCountries" width="826" height="380"></canvas>
+          </div>
+          <div class="card-footer">
+            <hr>
+            <div class="row">
+              <div class="col-sm-7">
+                <div class="footer-title">Lihat lebih banyak detail</div>
+              </div>
+              <div class="col-sm-5">
+                <div class="pull-right">
+                  <button class="btn btn-warning btn-round btn-icon btn-sm">
+                    <i class="nc-icon nc-alert-circle-i"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card ">
+          <div class="card-header ">
+            <h4 class="card-title">Penjualan Global berdasarkan Lokasi Teratas</h4>
+            <p class="card-category">Semua produk yang telah dikirim</p>
+          </div>
+          <div class="card-body ">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="table-responsive">
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="flag">
+                            <img src="{% static 'dashboard/assets/img/flags/ID.png' %}">
+                          </div>
+                        </td>
+                        <td>Indonesia</td>
+                        <td class="text-right">
+                          2.920
+                        </td>
+                        <td class="text-right">
+                          53.23%
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flag">
+                            <img src="{% static 'dashboard/assets/img/flags/US.png' %}">
+                          </div>
+                        </td>
+                        <td>USA</td>
+                        <td class="text-right">
+                          1.300
+                        </td>
+                        <td class="text-right">
+                          20.43%
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flag">
+                            <img src="{% static 'dashboard/assets/img/flags/AU.png' %}">
+                          </div>
+                        </td>
+                        <td>Australia</td>
+                        <td class="text-right">
+                          760
+                        </td>
+                        <td class="text-right">
+                          10.35%
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flag">
+                            <img src="{% static 'dashboard/assets/img/flags/GB.png' %}">
+                          </div>
+                        </td>
+                        <td>United Kingdom</td>
+                        <td class="text-right">
+                          690
+                        </td>
+                        <td class="text-right">
+                          7.87%
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flag">
+                            <img src="{% static 'dashboard/assets/img/flags/DE.png' %}">
+                          </div>
+                        </td>
+                        <td>Germany</td>
+                        <td class="text-right">
+                          600
+                        </td>
+                        <td class="text-right">
+                          5.94%
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flag">
+                            <img src="{% static 'dashboard/assets/img/flags/JP.png' %}">
+                          </div>
+                        </td>
+                        <td>Japan</td>
+                        <td class="text-right">
+                          550
+                        </td>
+                        <td class="text-right">
+                          4.34%
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col-md-6 ml-auto mr-auto">
+                <div id="worldMap" style="height: 300px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card  card-tasks">
+          <div class="card-header ">
+            <h4 class="card-title">Tasks</h4>
+            <h5 class="card-category">Backend development</h5>
+          </div>
+          <div class="card-body ">
+            <div class="table-full-width table-responsive">
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" checked>
+                          <span class="form-check-sign"></span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="img-row">
+                      <div class="img-wrapper">
+                        <img src="{% static 'dashboard/assets/img/faces/ayo-ogunseinde-2.jpg' %} " class="img-raised" />
+                      </div>
+                    </td>
+                    <td class="text-left">Not bad bro!👌</td>
+                    <td class="td-actions text-right">
+                      <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task? Admin Only">
+                        <i class="nc-icon nc-ruler-pencil"></i>
+                      </button>
+                      <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove? Admin Only">
+                        <i class="nc-icon nc-simple-remove"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox">
+                          <span class="form-check-sign"></span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="img-row">
+                      <div class="img-wrapper">
+                        <img src="{% static 'dashboard/assets/img/faces/erik-lucatero-2.jpg' %}" class="img-raised" />
+                      </div>
+                    </td>
+                    <td class="text-left">Outstanding website🔥</td>
+                    <td class="td-actions text-right">
+                      <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task? Admin Only">
+                        <i class="nc-icon nc-ruler-pencil"></i>
+                      </button>
+                      <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove? Admin Only">
+                        <i class="nc-icon nc-simple-remove"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" checked>
+                          <span class="form-check-sign"></span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="img-row">
+                      <div class="img-wrapper">
+                        <img src="{% static 'dashboard/assets/img/faces/kaci-baum-2.jpg' %}" class="img-raised" />
+                      </div>
+                    </td>
+                    <td class="text-left">Please teach me how to create a website, buddy! Hehe😊🙌
+                    </td>
+                    <td class="td-actions text-right">
+                      <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task? Admin Only">
+                        <i class="nc-icon nc-ruler-pencil"></i>
+                      </button>
+                      <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove? Admin Only">
+                        <i class="nc-icon nc-simple-remove"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox">
+                          <span class="form-check-sign"></span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="img-row">
+                      <div class="img-wrapper">
+                        <img src="{% static 'dashboard/assets/img/faces/joe-gardner-2.jpg' %}" class="img-raised" />
+                      </div>
+                    </td>
+                    <td class="text-left">Netizen, just ignore it haha🤣</td>
+                    <td class="td-actions text-right">
+                      <button type="button" rel="tooltip" title="" class="btn btn-info btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Edit Task? Admin Only">
+                        <i class="nc-icon nc-ruler-pencil"></i>
+                      </button>
+                      <button type="button" rel="tooltip" title="" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" data-original-title="Remove? Admin Only">
+                        <i class="nc-icon nc-simple-remove"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card-footer ">
+            <hr>
+            <div class="stats">
+              <i class="fa fa-refresh spin"></i> Updated 3 minutes ago
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card ">
+          <div class="card-header ">
+            <h4 class="card-title">Penjualan 2024</h4>
+            <p class="card-category">Semua Produk Termasuk Pajak</p>
+          </div>
+          <div class="card-body ">
+            <canvas id="chartActivity"></canvas>
+          </div>
+          <div class="card-footer ">
+            <div class="legend">
+              <i class="fa fa-circle text-info"></i> News Website
+              <i class="fa fa-circle text-warning"></i> Task Scheduling App
+            </div>
+            <hr>
+            <div class="stats">
+              <i class="fa fa-check"></i> Informasi data telah diverifikasi
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card ">
+          <div class="card-header ">
+            <h5 class="card-title">Statistik Email</h5>
+            <p class="card-category">Kinerja Kampanye Terakhir</p>
+          </div>
+          <div class="card-body ">
+            <canvas id="chartDonut1" class="ct-chart ct-perfect-fourth" width="456" height="300"></canvas>
+          </div>
+          <div class="card-footer ">
+            <div class="legend">
+              <i class="fa fa-circle text-primary"></i> Open
+            </div>
+            <hr>
+            <div class="stats">
+              <i class="fa fa-calendar"></i> Jumlah email yang dikirim
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card ">
+          <div class="card-header ">
+            <h5 class="card-title">Pengunjung Baru</h5>
+            <p class="card-category">Dari Total Jumlah</p>
+          </div>
+          <div class="card-body ">
+            <canvas id="chartDonut2" class="ct-chart ct-perfect-fourth" width="456" height="300"></canvas>
+          </div>
+          <div class="card-footer ">
+            <div class="legend">
+              <i class="fa fa-circle text-warning"></i> Dikunjungi
+            </div>
+            <hr>
+            <div class="stats">
+              <i class="fa fa-check"></i> Dikirim 2 hari yang lalu
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card ">
+          <div class="card-header ">
+            <h5 class="card-title">Pesanan</h5>
+            <p class="card-category">Jumlah Total</p>
+          </div>
+          <div class="card-body ">
+            <canvas id="chartDonut3" class="ct-chart ct-perfect-fourth" width="456" height="300"></canvas>
+          </div>
+          <div class="card-footer ">
+            <div class="legend">
+              <i class="fa fa-circle text-danger"></i> Selesai
+            </div>
+            <hr>
+            <div class="stats">
+              <i class="fa fa-clock-o"></i> Diperbarui 3 menit yang lalu
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card ">
+          <div class="card-header ">
+            <h5 class="card-title">Langganan</h5>
+            <p class="card-category">Pengguna Kami</p>
+          </div>
+          <div class="card-body ">
+            <canvas id="chartDonut4" class="ct-chart ct-perfect-fourth" width="456" height="300"></canvas>
+          </div>
+          <div class="card-footer ">
+            <div class="legend">
+              <i class="fa fa-circle text-secondary"></i> Berakhir
+            </div>
+            <hr>
+            <div class="stats">
+              <i class="fa fa-history"></i> Total pengguna
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
+
+
+{% block js %}
+<script>
+  $(document).ready(function() {
+    // Javascript method's body can be found in assets/js/demos.js
+    demo.initDashboardPageCharts();
+
+
+    demo.initVectorMap();
+
+  });
+</script>
+{% endblock js %}

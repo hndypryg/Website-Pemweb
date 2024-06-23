@@ -1,0 +1,62 @@
+{% extends 'halaman/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="page-header header-filter header-small" data-parallax="true" style="background-image: url('{% static 'halaman/assets/img/bg7.jpg' %}');">
+    <div class="container">
+        <div class="row">
+            <div class="card-content text-center">
+                <h1 class="title">WELCOME TO MY PROFILE!</h1>
+                <div class="card-content text-center">
+                    <h4>Handsome and Brave</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main main-raised">
+    <div class="container">
+        <div class="about-description text-center">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h5 class="description">Welcome to my profile! I'm passionate about Information Technology (IT) and dedicated to enhancing efficiency and innovation through advanced technological solutions. With 2 years of experience in the IT field, I bring a wealth of knowledge and a strong work ethic to every project I undertake.</h5>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="about-team team-1">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <h2 class="title">Hi!</h2>
+                    <h5 class="description">---------------------</h5>
+                </div>
+            </div> -->
+
+            <div class="row">
+                <div class="col-md-0 col-md-offset-0">
+                    <div class="card card-profile card-plain">
+                        <div class="card-avatar text-center">
+                            <a href="#hendy">
+                                <img class="img" src="{% static 'halaman/assets/img/faces/pp.jpg' %}" />
+                            </a>
+                        </div>
+
+                        <div class="card-content text-center">
+                            <h4 class="card-title">Hendy Prayoga</h4>
+                            <h6 class="category text-muted">Presiden 2044</h6>
+                            <p class="card-description">
+                                "Tetap setia, tetap rendah hati"
+                            </p>
+                            <div class="footer">
+                                <a href="https://www.facebook.com/HndyPryg" class="btn btn-just-icon btn-simple btn-facebook"><i class="fa fa-facebook-square"></i></a>
+                                <a href="https://www.instagram.com/_hndypryg" class="btn btn-just-icon btn-simple btn-instagram"><i class="fa fa-instagram"></i></a>
+                                <a href="https://github.com/hndypryg" class="btn btn-just-icon btn-simple btn-github"><i class="fa fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
